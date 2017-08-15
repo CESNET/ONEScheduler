@@ -19,14 +19,15 @@ import org.slf4j.LoggerFactory;
 public class FilterDatastoresByStorage implements ISchedulingDatastoreFilterStrategy {
 
     protected final Logger log = LoggerFactory.getLogger(getClass());
-    
+
     /**
      * Tests whether current host has enough free space(mb)
+     *
      * @param vm with the disks sizes to be checked
      * @param ds to be checked
      * @param host to be checked
      * @param schedulerData with the current reservations on resources.
-     * @return 
+     * @return
      */
     @Override
     public boolean test(VmElement vm, DatastoreElement ds, HostElement host, SchedulerData schedulerData) {
@@ -58,14 +59,16 @@ public class FilterDatastoresByStorage implements ISchedulingDatastoreFilterStra
         }
         return matched;
     }
-    
+
     private boolean testOnDs(Integer sizeValue, Integer reservedStorage, Integer freeSpace) {
         Integer actualStorage = freeSpace - reservedStorage;
+        
         return (actualStorage > sizeValue);
     }
 
     /**
      * Tests the capacity directly on the datastore node on Host.
+     *
      * @param sizeValue the size to be checked
      * @param reservedStorage the reserved storage in the datastore
      * @param host the host with the datastore node
@@ -73,7 +76,7 @@ public class FilterDatastoresByStorage implements ISchedulingDatastoreFilterStra
      * @return true if the size fits on the specified ds.
      */
     private boolean testOnDsNode(Integer sizeValue, Integer reservedStorage, HostElement host, DatastoreElement ds) {
-        if (host.getDatastores()== null || host.getDatastores().isEmpty()) {
+        if (host.getDatastores() == null || host.getDatastores().isEmpty()) {
             return false;
         }
         DatastoreNode dsNode = host.getDatastoreNode(ds.getId());

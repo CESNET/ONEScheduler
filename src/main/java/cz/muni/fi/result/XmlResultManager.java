@@ -36,13 +36,13 @@ public class XmlResultManager implements IResultManager {
 
     @Override
     public List<VmElement> deployPlan(List<Match> plan) {
-        log.info("Simulator not available.");
+        log.warn("Simulator is not available - cannot deploy any VM for real.");
         return new ArrayList<>();
     }
 
     @Override
     public List<VmElement> migrate(List<Match> migrations) {
-        log.info("Simulator not available.");
+        log.warn("Simulator not available - cannot migrate any VM for real.");
         return new ArrayList<>();
     }
 }

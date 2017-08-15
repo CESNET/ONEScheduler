@@ -48,6 +48,7 @@ public class UserPriorityCalculator {
      */
     public Map<Integer, Float> getUserPriorities(Set<Integer> userIds) {
         Map<Integer, Float> userPriorities = new HashMap<>();
+        //System.out.println("user priorities... of users num "+userIds.size());
         for (Integer userId : userIds) {                                    
             float currentUserPriority = calculateCurrentUserPriority(userId);
             float pastUserPriority = calculatePastUserPriority(userId);
@@ -71,6 +72,7 @@ public class UserPriorityCalculator {
         
         float currentPriority = 0;
         for (VmElement vm : vms) {
+            //System.out.println("priority of vm "+vm.getVmId());
             currentPriority += getVmUsage(vm);  
         }
         return currentPriority;
@@ -127,7 +129,8 @@ public class UserPriorityCalculator {
      * @param vm the virtual machine
      * @return the fairshare usage of the virtual machine
      */
-    private float getVmUsage(VmElement vm) {       
+    private float getVmUsage(VmElement vm) {      
+        //System.out.println("past usage of vm "+vm.getVmId());
         float pastVmUsage = calculatePastVmUsage(vm);  
         float activeVmUsage = calculateActiveVmUsage(vm);
         // unless vm is DONE
@@ -172,6 +175,7 @@ public class UserPriorityCalculator {
         float priority = vmRecord.getUsage();        
         
         VmElement vmFromRecord = vmRecordManager.createVmFromRecord(vm, vmRecord); 
+//        System.out.println(vm.getVmId()+" calculate past usage for num histories ="+vm.getClosedHistories().size());
         for (HistoryNode history : vm.getClosedHistories()) {
             if (history.getSequence() > vmRecord.getLastClosedHistory()) {                
                 int historyRunTime = vm.getHistoryRuntime(history);            

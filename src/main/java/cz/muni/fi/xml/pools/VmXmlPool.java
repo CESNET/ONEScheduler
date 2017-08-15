@@ -37,7 +37,9 @@ public class VmXmlPool implements IVmPool {
         XmlMapper xmlMapper = new XmlMapper();
         String vmPoolMessage = new String(Files.readAllBytes(Paths.get(vmPoolPath)));
         VmXmlList xmlList = xmlMapper.readValue(vmPoolMessage, VmXmlList.class);
+        //System.out.println("reading vms "+xmlList.getVms().size());
         vms = vmXmlMapper.map(xmlList.getVms());
+        //System.out.println("reading finished of vms "+vms.size());
     }
     
     /**

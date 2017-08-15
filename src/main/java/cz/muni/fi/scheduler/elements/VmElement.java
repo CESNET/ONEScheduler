@@ -5,6 +5,7 @@ import cz.muni.fi.scheduler.elements.nodes.DiskNode;
 import cz.muni.fi.scheduler.elements.nodes.NicNode;
 import cz.muni.fi.scheduler.elements.nodes.PciNode;
 import cz.muni.fi.scheduler.elements.nodes.HistoryNode;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -124,6 +125,10 @@ public class VmElement {
      * @return the closed histories
      */
     public List<HistoryNode> getClosedHistories() {
+        if(histories == null){
+            return new LinkedList<HistoryNode>();
+        }
+        System.out.println(this.getVmId()+" closed histories = "+histories.size());
         return histories.stream().filter(HistoryNode::isClosed).collect(Collectors.toList());
     }
     
@@ -133,6 +138,9 @@ public class VmElement {
      * @return the last closed history
      */
     public HistoryNode getLastClosedHistory() {
+        if(histories == null){
+            return null;
+        }
         for (int i=histories.size()-1; i>=0; i--) {
             HistoryNode history = histories.get(i);
             if (history.isClosed()) {

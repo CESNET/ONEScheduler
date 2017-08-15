@@ -1,5 +1,5 @@
 ##ONEScheduler
-ONEScheduler is a custom open source cloud scheduler for OpenNebula and is currently under development. First release is expected in 2017. 
+ONEScheduler is a custom open source cloud scheduler for OpenNebula and is currently under development.  
 ONEScheduler is a maven project, download or clone the project and run it in your IDE.
 ONEScheduler is being developed as a replacement for current scheduler that OpenNebula provides.
 Unlike the OpenNebula's scheduler, our scheduler has modular design and can be easily extended.
@@ -22,7 +22,7 @@ Unlike the OpenNebula's scheduler, our scheduler has modular design and can be e
 ONEScheduler can be used in two modes:
 (You can switch between these two modes in the configuration file under "testingMode" field)
 - connecting to OpenNebula and obtaining the xml files from OpenNebula (testingMode=false)
-- providing the xml files in form of "hostpool.xml", "vmpool.xml" etc. (testingMode=true) (This mode will be used for the simulations)
+- providing the xml files in form of "hostpool.xml", "vmpool.xml" etc. (testingMode=true) (This mode is used for the simulations)
 
 For connecting to OpenNebula you need to fill the "secret" and "endpoint" field in configuration file.
 - "secret" - A string containing the ONE user:password tuple. Can be null.
@@ -30,4 +30,9 @@ For connecting to OpenNebula you need to fill the "secret" and "endpoint" field 
 
 For running it as a replacement of OpenNebula, you should shut down the OpenNebula scheduler daemon.
 
-This project is a part of a master's thesis at Faculty of Informatics at Masaryk University.
+This project is a part of a masters' theses done at Faculty of Informatics at Masaryk University.
+
+#####Simulations done with ONEScheduler:
+Simulation data for experiments concerning ONEScheduler's scheduling speed as well as properly setup ONEScheduler for such tests can be found in the branch "runtime_experiments".
+
+Real-life based data concerning cloud workloads can be found at: http://jsspp.org/workload/index.php?page=cerit

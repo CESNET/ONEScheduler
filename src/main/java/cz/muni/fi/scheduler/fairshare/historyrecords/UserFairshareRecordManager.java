@@ -97,6 +97,7 @@ public class UserFairshareRecordManager implements IUserFairshareRecordManager {
      */
     @Override
     public void clearContent() {
+        System.out.println("Deleting file "+file.getAbsolutePath());
         file.delete();
     }
     

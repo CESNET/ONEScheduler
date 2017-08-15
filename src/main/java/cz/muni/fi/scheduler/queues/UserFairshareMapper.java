@@ -35,6 +35,7 @@ public class UserFairshareMapper implements IQueueMapper {
      */
     @Override
     public List<Queue> mapQueues(List<VmElement> vms) {
+        //System.out.println("user priorities...");
         Map<Integer, Float> userPriorities = calculator.getUserPriorities(VmListExtension.getUserIds(vms));
         userPriorities = applyFairsharePercentages(userPriorities);
         List<Integer> sortedUsers = MapExtension.sortByValue(userPriorities);

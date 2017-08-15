@@ -225,4 +225,51 @@
         <SCHED_REQUIREMENTS></SCHED_REQUIREMENTS>
         <PCI_DEVICES/>
     </VM>
+    <VM>
+        <ID>42</ID>
+        <UID>1</UID>
+        <GID>0</GID>
+        <NAME>vm42</NAME>
+        <STATE>1</STATE>
+        <LCM_STATE></LCM_STATE>
+        <RESCHED>0</RESCHED>
+        <DEPLOY_ID></DEPLOY_ID>
+        <CPU>0.6</CPU>
+        <MEMORY>64</MEMORY>
+        <DISKS>
+            <DISK>
+                <DATASTORE_ID>1</DATASTORE_ID>
+                <SIZE>200</SIZE>
+                <CLONE>YES</CLONE>
+                <TM_MAD>ssh</TM_MAD>
+            </DISK>
+        </DISKS>
+        <HISTORY_RECORDS>
+            <HISTORY>
+                <SEQ>0</SEQ>
+                <RSTIME>1456264052</RSTIME>
+                <RETIME>1461223291</RETIME>
+                <REASON>2</REASON>
+            </HISTORY>
+            <HISTORY>
+                <SEQ>1</SEQ>
+                <RSTIME>1467280824</RSTIME>
+                <RETIME>1467281433</RETIME>
+                <REASON>2</REASON>
+            </HISTORY>
+            <HISTORY>
+                <SEQ>2</SEQ>
+                <RSTIME>1467280824</RSTIME>
+                <RETIME>1467281433</RETIME>
+                <REASON>0</REASON>
+            </HISTORY>
+        </HISTORY_RECORDS>
+        <NICS>
+            <NIC>
+                <NETWORK_ID>0</NETWORK_ID>
+            </NIC>
+        </NICS>
+        <SCHED_REQUIREMENTS></SCHED_REQUIREMENTS>
+        <PCI_DEVICES/>
+    </VM>
 </VMPOOL>

@@ -7,7 +7,7 @@ import cz.muni.fi.scheduler.elements.VmElement;
 /**
  * Filters are used for filtering datastores in the system.
  * It matches the given Virtual machine and datastore, whether it meets the desired criteria.
- * For each criteria we create one Filter class by impelenting this interface.
+ * For each criteria we create one Filter class by implementing this interface.
  * 
  * @author Gabriela Podolnikova
  */

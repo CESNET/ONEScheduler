@@ -1,0 +1,25 @@
+
+<configuration packagingData="false" debug="false" scan="false" scanPeriod="30 seconds">
+
+
+	<!-- logging to console -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+		<!-- the main logger and its level -->
+	<root level="warn">
+		<!--<appender-ref ref="main"/>-->
+		<appender-ref ref="STDOUT"/>
+	</root>
+	<!-- keep Spring quiet -->
+	<logger name="org.springframework" level="warn"/>
+	<logger name="org.springframework.web.context.ContextLoader" level="warn"/>
+        <logger name="cz.muni" level="warn"/>
+
+
+	
+
+</configuration>

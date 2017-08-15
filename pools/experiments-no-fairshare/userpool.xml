@@ -1,0 +1,10 @@
+<USERPOOL>
+    <USER>
+        <ID>0</ID>
+        <GID/>
+        <GROUPS>
+            <GROUPS>0</GROUPS>
+        </GROUPS>
+        <VM_QUOTA/>
+    </USER>    
+</USERPOOL>

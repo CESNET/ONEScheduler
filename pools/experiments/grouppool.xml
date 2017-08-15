@@ -1,0 +1,11 @@
+<GROUPPOOL>
+  <GROUP>
+    <ID>0</ID>
+    <NAME>users</NAME>
+    <USERS>
+      <USERS>0</USERS>
+      <USERS>1</USERS>
+      <USERS>2</USERS>
+    </USERS>
+  </GROUP>
+</GROUPPOOL>

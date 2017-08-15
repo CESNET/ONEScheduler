@@ -1,10 +1,10 @@
-##ONEScheduler
+## ONEScheduler
 ONEScheduler is a custom open source cloud scheduler for OpenNebula and is currently under development.  
 ONEScheduler is a maven project, download or clone the project and run it in your IDE.
 ONEScheduler is being developed as a replacement for current scheduler that OpenNebula provides.
 Unlike the OpenNebula's scheduler, our scheduler has modular design and can be easily extended.
 
-#####ONEScheduler offers:
+##### ONEScheduler offers:
 - fair-sharing algorithms
 - host and datastore criteria based filtration
 - simple interfaces for policies
@@ -13,7 +13,7 @@ Unlike the OpenNebula's scheduler, our scheduler has modular design and can be e
 - its own configuration file (configuration.properties)
 - and cofigurable fairshare (fairshare.properties)
 
-#####ONEScheduler is introducing:
+##### ONEScheduler is introducing:
 - QueueMapper interface for creating Queues.
   Offering fair-share based queues or simple queue mapping implementations.
 - VmSelector interface that chooses the VM that will be processed.
@@ -32,7 +32,7 @@ For running it as a replacement of OpenNebula, you should shut down the OpenNebu
 
 This project is a part of a masters' theses done at Faculty of Informatics at Masaryk University.
 
-#####Simulations done with ONEScheduler:
+##### Simulations done with ONEScheduler:
 Simulation data for experiments concerning ONEScheduler's scheduling speed as well as properly setup ONEScheduler for such tests can be found in the branch "runtime_experiments".
 
 Real-life based data concerning cloud workloads can be found at: http://jsspp.org/workload/index.php?page=cerit
